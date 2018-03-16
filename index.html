@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html class="no-js"> 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width">
+
+    <title>Knitto | Musbahniar</title>
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Aplikasi, Ujian, Melamar, Knitto">
+    <meta name="keywords" content="Knitto, Kain, Online, Jualan">
+    <meta name="author" content="Musbahniar">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/colors/blue.css" title="blue">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/angular-growl.min.css">
+
+</head>
+
+<body>
+<div class="preloader">
+  <div class="status">&nbsp;</div>
+</div>
+
+<div id="wrap">
+    <div data-ng-view></div>
+</div>
+
+<!-- load jQuery-->
+<script src="./lib/jquery/jquery-1.8.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+jQuery(window).load(function() {
+        // will first fade out the loading animation
+    jQuery(".status").delay(5000).fadeOut();
+        // will fade out the whole DIV that covers the website.
+    jQuery(".preloader").delay(1000).fadeOut("slow");
+})
+</script>
+
+<!-- Libraries -->
+<!-- <script src="js/angular.min.js"></script> -->
+<script type="text/javascript" src="./lib/angular-1.2.7/angular.js"></script>
+<script type="text/javascript" src="./lib/angular-1.2.7/angular-animate.js"></script>
+<script type="text/javascript" src="./lib/angular-1.2.7/angular-route.js"></script>
+<script type="text/javascript" src="./lib/angular-1.2.7/angular-local-storage.js"></script>
+<script type="text/javascript" src="./lib/angular-1.2.7/angular-growl.js"></script>
+
+<!-- <script src="js/custom.js"></script> -->
+
+<script  data-main="main.js" src="./lib/require/require.js"></script>
+
+</body>
+</html>

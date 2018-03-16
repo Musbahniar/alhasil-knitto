@@ -1,0 +1,73 @@
+<div growl></div>
+<div class="color-overlay">
+		<div class="navigation-header">
+		<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#landx-navigation">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="images/Logo.png" alt=""></a>
+				</div>
+				
+				<!-- MENU LINKS -->
+				<div class="navbar-collapse collapse" id="landx-navigation">
+					<ul class="nav navbar-nav navbar-right main-navigation">
+						<li><a href="./index.html#!/beranda">Beranda</a></li>
+						<li><a href="./index.html#!/info">Info Produk</a></li>
+						<li><a href="./index.html#!/kontak">Kontak</a></li>
+						<a href="#" class="btn btn-danger btn-lg">Katalog</a>
+						<a href="./index.html#!/login" class="btn btn-primary btn-lg">Login</a>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+<div class="container">
+<br/>
+	<h2>Login <font color="red"><strong>Pelanggan</strong></font></h2>
+	<div class="colored-line">
+	</div>
+	
+	<div class="sub-heading">
+		Silakan Login jika Anda sudah mempunyai akun
+	</div>
+	<br />
+				<form class="col-md-6 col-md-offset-3">
+					<div class="form-group">
+						<label for="InputEmail1">Email</label>
+						<input class="form-control" id="InputEmail1" placeholder="Email" data-ng-model="login.email">
+					</div>
+					<div class="form-group">
+						<label for="InputPassword1">Password</label>
+						<input class="form-control" id="InputPassword1" placeholder="Password" type="password" data-ng-model="login.password">
+					</div>
+					<button type="submit" class="btn btn-primary btn-md" data-ng-click="cekLogin()">
+					<img data-ng-show="loading" src="images/ajax-loader.gif"> 
+					<p data-ng-hide="loading">
+					Login
+					</p>
+					</button>
+					<div class="checkbox">
+						<label>
+						<hr>
+						<em><a href="#">Daftar Akun</a> - <a href="#">Lupa Password</em>
+						</label>
+					</div>
+				</form>
+</div> 
+</section>
+<br /><br />
+<footer class="bgcolor-2">
+<div class="container">		
+	<ul class="social-icons">
+		<li><img src="images/icons/Facebook-icon.png"></li>
+		<li><img src="images/icons/Instagram-icon.png"></li>
+		<li><img src="images/icons/Twitter-icon.png"></li>
+	</ul>
+</div>
+</footer>

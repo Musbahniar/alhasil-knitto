@@ -1,0 +1,25 @@
+<div ng-if="level">
+    <div ng-include src="'./core/view/header.html'"></div>
+    
+        <!-- HEADING, FEATURES AND REGISTRATION FORM CONTAINER -->
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <h3 class="intro text-left">
+                        <br />
+                    <font color="red"><strong>Knitto Home</strong></font>
+                    </h3>
+                    <p class="sub-heading text-left">
+                      <font color="black"><strong>Selamat datang, {{namalevel}}</strong></font> 
+                      
+                    </p>
+                </div>
+            </div>
+                <div class="col-md-6">
+                    <div class="home-screenshot side-screenshot pull-left">
+                        <img src="images/screenshots/1.png" alt="Feature" class="img-responsive">
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div ng-include src="'./core/view/404.html'" ng-if="!level"></div>

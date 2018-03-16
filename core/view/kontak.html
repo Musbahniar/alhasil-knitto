@@ -1,0 +1,108 @@
+<div growl></div>
+	<div class="navigation-header">
+		<div class="navbar navbar-inverse bs-docs-nav navbar-fixed-top sticky-navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#landx-navigation">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="images/Logo.png" alt=""></a>
+				</div>
+				
+				<!-- MENU LINKS -->
+				<div class="navbar-collapse collapse" id="landx-navigation">
+					<ul class="nav navbar-nav navbar-right main-navigation">
+						<li><a href="./index.html#!/beranda">Beranda</a></li>
+						<li><a href="./index.html#!/info">Info Produk</a></li>
+						<li><a href="./index.html#!/kontak">Kontak</a></li>
+						<a href="#" class="btn btn-danger btn-lg">Katalog</a>
+						<a href="./index.html#!/login" class="btn btn-primary btn-lg">Login</a>
+					</ul>
+				</div>
+				
+			</div>
+		</div>
+	</div>
+
+<section class="cta-section">
+<div class="color-overlay">
+	<div class="container">
+	<div class="row">
+			<div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+				<h3 class="intro text-left">
+				<font color="black">Kontak</font> <font color="red"><strong>Knitto</strong></font>
+				</h3>
+				<p class="sub-heading text-left">
+				<form name="myForm" ng-controller="Ctrlemail">
+					<input class="form-control" id="InputEmail1" placeholder="Nama Lengkap" data-ng-model="kontak.nama"><br/>
+					<div class="form-group">
+						<span class="error" ng-show="myForm.input.$error.email">Not valid email!</span>
+						<input type="email" class="form-control" name="input" data-ng-model="kontak.email" placeholder="me@example.com">
+					</div>
+					<!-- <input class="form-control" id="InputEmail1" placeholder="Email" data-ng-model="kontak.email"><br/> -->
+					<input class="form-control" id="InputEmail1" placeholder="No Telepon / Handphone" data-ng-model="kontak.hp"><br/>
+					<textarea class="form-control" placeholder="Pesan" data-ng-model="kontak.pesan"></textarea><br/>
+					<button type="submit" class="btn btn-danger btn-md" data-ng-click="cekKontak()">
+						<img data-ng-show="loading" src="images/ajax-loader.gif"> 
+						<p data-ng-hide="loading">
+						 Kirim Pesan
+						</p>
+						</button>
+				</form>
+				</p>
+			</div>
+			<div class="col-4">
+				<div class="intro text-left">
+				<font color="black"><strong>Lokasi Kami</strong>
+				<br/>Jl. Kebon Jukut No. 15, Bandung,
+				<br/>Jawab Barat, Indonesia 
+				</font>
+				<br/><br/>
+				<font color="black"><strong>Email & Telepon</strong>
+				<br/>WA : 082129291192 | 081910607055 | 087722020009
+				<br/>(022) 4214962 / 4214963
+				<br/>Email : info@knitto.co.id 
+				</font>
+				<br/><br/>
+				<font color="black"><strong>Jam Buka</strong>
+				<br/>Senin - Jumat : 08.30 - 16.30 WIB
+				<br/>Sabtu : 08.30 - 14.30 WIB
+				<br/>Minggu : Libur 
+				</font>
+				
+				</div>
+			</div>
+    </div>
+
+		</div>
+	</div>
+</div> 
+</section>
+
+<!-- =========================
+     FOOTER 
+============================== -->
+<footer class="bgcolor-2">
+<div class="container">	
+	<div class="copyright">
+		 Hak Cipta © 2018 Musbahniar<br/>
+	</div>
+	
+	<ul class="social-icons">
+		<li><img src="images/icons/Facebook-icon.png"></li>
+		<li><img src="images/icons/Instagram-icon.png"></li>
+		<li><img src="images/icons/Twitter-icon.png"></li>
+	</ul>
+</div>
+</footer>
+
+<script>
+	function Ctrlemail($scope){
+		$scope.email ={ 
+		text: 'me@example.com'
+	};
+	}
+</script>
