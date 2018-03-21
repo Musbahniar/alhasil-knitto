@@ -1,0 +1,43 @@
+<div growl></div>
+<div ng-if="level">
+        <div ng-include src="'./core/view/header.html'"></div>
+        
+            <!-- HEADING, FEATURES AND REGISTRATION FORM CONTAINER -->
+            <div class="container">
+            <br/><br/>
+               <div class="row">
+                  <div class="col-sm-10 col-md-8" >
+                    <section class="app-body">
+                        <section class="archive-control">
+                            <span>{{ remaining() }} of {{ todos.length }} remaining</span>
+                            <p>[ <a href="" data-ng-click="archive()">Remove Completed Items</a> ]</p>
+                        </section>
+                        
+                        <table width="100%" border="1" id="table-4" align="center">
+                            <tr>
+                                <th>Id Barang</th>
+                                <th>Nama Barang</th>
+                                <th>Jumlah</th>
+                                <th>Harga</th>
+                                <th>Total</th>
+                            </tr>
+                            <tr data-ng-repeat="todo in todos track by $index">
+                                <td><input type="checkbox" data-ng-model="todo.done">{{ todo.id }}<input type="hidden" size ="2" ng-model="todo.id"/></td>
+                                <td>{{ todo.namabrg }}</td>
+                                <td>{{ todo.jml }}<input type="hidden" size ="2" ng-model="todo.jml"/></td>
+                                <td>{{ todo.hargakg }}<input type="hidden" size ="5" ng-model="todo.hargakg"/></td>
+                                <td>{{ todo.total}} </td>
+                            </tr>
+                        </table>
+                    </section>
+    
+                  </div>
+                  <div class="col-sm-6 col-md-4">
+                        <button type="button" class="btn btn-primary" ng-click="saveAll()">Bayar Sekarang</button>
+                        <h3></h3>
+                  </div>
+              </div>
+    </div>
+        <div ng-include src="'./core/view/404.html'" ng-if="!level"></div>
+    
+        

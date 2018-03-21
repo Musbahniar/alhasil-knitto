@@ -14,7 +14,8 @@
                 <!-- MENU LINKS -->
                 <div class="navbar-collapse collapse" id="landx-navigation">
                     <ul class="nav navbar-nav navbar-right main-navigation">
-                        <a href="#" class="btn btn-danger btn-lg">Home</a>
+                        <a href="./index.html#!/home" class="btn btn-default btn-lg">Home</a>
+                        <a href="./index.html#!/cart" class="btn btn-danger btn-lg">Keranjang Belanja <span class="badge">{{ remaining() }}</span></a>
                         <a href="#" data-ng-click="logout()" class="btn btn-primary btn-lg">LogOut</a>
                     </ul>
                 </div>
@@ -24,11 +25,30 @@
     </div>
 
     <script>
-            function CtrlHeader($scope,localStorageService,$window,$location){
-                $scope.logout = function(){
+            // function CtrlHeader($scope,localStorageService,$window,$location){
+       /*         $scope.logout = function(){
                     localStorageService.clearAll();
+                    localStorage.removeItem('todos');
+                    $window.localStorage.clear();
                     $location.path('/');
+                }*/
+
+/*                var tblC  = localStorage.getItem("todos");
+                tblC = JSON.parse(tblC);
+                if(tblC == null)    {
+                    $scope.todos = [];
+                } else {
+                    $scope.todos = tblC;
                 }
 
-            }
+                $scope.remaining = function() {
+                    var count = 0;
+                    angular.forEach($scope.todos, function(todo){
+                        count+= todo.done ? 0 : 1;
+                    });
+                    return count;
+                };*/
+
+
+            // }
     </script>

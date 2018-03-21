@@ -3,23 +3,20 @@
     
         <!-- HEADING, FEATURES AND REGISTRATION FORM CONTAINER -->
         <div class="container">
+        <br/><br/>
             <div class="row">
-                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                    <h3 class="intro text-left">
-                        <br />
-                    <font color="red"><strong>Knitto Home</strong></font>
-                    </h3>
-                    <p class="sub-heading text-left">
-                      <font color="black"><strong>Selamat datang, {{namalevel}}</strong></font> 
-                      
-                    </p>
-                </div>
-            </div>
-                <div class="col-md-6">
-                    <div class="home-screenshot side-screenshot pull-left">
-                        <img src="images/screenshots/1.png" alt="Feature" class="img-responsive">
+                <div class="col-sm-6 col-md-4" ng-repeat="itemBarang in barang">
+                  <div class="thumbnail">
+                    <div class="caption">
+                      <h3>{{itemBarang.c_NamaBarang}}</h3>
+                      <p>{{itemBarang.c_Keterangan}}</p>
+                      <p>Stok Tersisa {{itemBarang.c_StokKg}}</p>
+                      <p>Rp {{itemBarang.c_HargaKg}}</p>
+                      <p><a href="#" class="btn btn-primary" role="button" ng-click="pesan(itemBarang.c_IdBarang,itemBarang.c_NamaBarang,itemBarang.c_Keterangan,itemBarang.c_HargaKg,itemBarang.c_HargaRoll)" title="Beli Barang">Beli</a></p>
                     </div>
+                  </div>
                 </div>
-        </div>
-    </div>
+          </div>
+
+</div>
     <div ng-include src="'./core/view/404.html'" ng-if="!level"></div>

@@ -1,0 +1,41 @@
+<div growl></div>
+<div ng-if="level">
+    <div ng-include src="'./core/view/header.html'"></div>
+    
+        <!-- HEADING, FEATURES AND REGISTRATION FORM CONTAINER -->
+        <div class="container">
+        <br/><br/>
+           <div class="row">
+              <div class="col-sm-10 col-md-8" >
+                <section class="app-body">
+                    <img src="images/screenshots/1.png" alt="Feature" class="img-responsive">
+                </section>
+              </div>
+              <div class="col-sm-6 col-md-4">
+                  <h4>{{namabrg}}</h4>
+                  <p>{{ketbrg}}</p>
+                  <h3>Rp {{hargakali}}</h3>
+                  <hr/>
+                  <label for="inputPassword" class="col-sm-2 col-form-label">*Satuan</label>
+                  <select class="form-control form-control-sm">
+                      <option value="">--Silahkan Pilih--</option>
+                      <option value="kg">--Kg--</option>
+                      <option value="roll">--Roll--</option>
+                  </select>
+<br />
+<label for="inputPassword" class="col-sm-2 col-form-label">*Jumlah</label>
+<input type="text" class="form-control" id="jml" value="1">
+
+<br/>
+<button type="button" class="btn btn-primary" ng-click="addTodo()">Beli</button>
+<input type="hidden" data-ng-model="namabrg" value="{{namabrg}}" />
+<input type="hidden" data-ng-model="idbrg" value="{{idbrg}}" />
+<input type="hidden" data-ng-model="hargakg" value="{{hargakg}}" >
+<input type="hidden" data-ng-model="hargaroll" value="{{hargaroll}}" >
+        </div>
+    </div>
+</div>
+    <div ng-include src="'./core/view/404.html'" ng-if="!level"></div>
+
+
+    

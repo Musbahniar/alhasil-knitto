@@ -42,9 +42,34 @@ define([
         };
     });
 
+    app.controller('CtrlHeader', function ($scope,localStorageService,$window,$location) {
+        var tblC  = localStorage.getItem("todos");
+                tblC = JSON.parse(tblC);
+                if(tblC == null)    {
+                    $scope.todos = [];
+                } else {
+                    $scope.todos = tblC;
+                }
+
+        $scope.remaining = function() {
+                    var count = 0;
+                    angular.forEach($scope.todos, function(todo){
+                        count+= todo.done ? 0 : 1;
+                    });
+                    return count;
+                };
+
+        $scope.logout = function(){
+                    localStorageService.clearAll();
+                    localStorage.removeItem('todos');
+                    $window.localStorage.clear();
+                    $location.path('/');
+                }
+
+    });
    
-    //app.baseUrlServer = 'http://localhost/melamar/knitto/server/';
-     app.baseUrlServer = 'http://35.196.242.68/server/';
+    // app.baseUrlServer = 'http://localhost/melamar/knitto/server/';
+     app.baseUrlServer = 'http://35.229.83.128/server/';
     return app;
 });
 

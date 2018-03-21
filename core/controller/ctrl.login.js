@@ -12,6 +12,7 @@ define([
                 serviceAjax.posDataToServer('Login',$scope.login).then(function(data){
                     $timeout(function(){
                         if (data.length > 0) {
+                            localStorage.removeItem('todos');
                             $location.path('/home');
                             localStorageService.add('user',data);
                         } else {

@@ -9,7 +9,7 @@ define([
         $scope.cekKontak = function(){
             $scope.loading = true;
             if($scope.kontak['nama'] !== undefined && $scope.kontak['email'] !== undefined && $scope.kontak['hp'] != undefined && $scope.kontak['pesan'] != undefined ){
-                serviceAjax.posDataToServer('Kontak',$scope.kontak).then(function(data){
+               serviceAjax.posDataToServer('Kontak',$scope.kontak).then(function(data){
                     $timeout(function(){
                         if (data.status == 'ok') {
                             growl.addWarnMessage("Ok, Permintaan sudah tersimpan segera kami tindak lanjuti ",{ttl: 3000});
