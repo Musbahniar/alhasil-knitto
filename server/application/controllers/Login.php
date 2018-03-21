@@ -30,6 +30,13 @@ class Login extends CI_Controller {
 	}
 
 
+	public function tes()
+	{
+		$cekdata = $this->Login_model->tesPanggil();
+        echo json_encode($cekdata);
+	}
+
+
 	//pasangan construct adalah destruct untuk menghapus inisialisasi class pada memori
 	function __destruct(){
 	}

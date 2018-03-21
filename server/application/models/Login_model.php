@@ -11,4 +11,7 @@ class Login_model extends CI_Model {
          return  $this->db->query("SELECT * FROM tbl_login")->result_array();
 	}
 
+	function tesPanggil(){
+		return "ADA";
+	}
 }
